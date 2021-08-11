@@ -1,0 +1,27 @@
+.cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    &_inner {
+        padding: 20px;
+    }
+    &_content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.commonPrice {
+    margin-right: 50px;
+}
+
