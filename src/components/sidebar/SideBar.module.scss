@@ -1,0 +1,34 @@
+
+.sideBar {
+    max-width: 300px;
+    height: 1300px;
+    margin: 75px 0px;
+    text-align: center;
+    margin-right: 50px;
+    border: 1px solid #d43f3f;
+    background-color: #ffd7d7; 
+    color: #d43f3f;
+    border-radius: 5px;
+    flex-grow: 0;
+    &_inner {
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    &_item {
+        margin-bottom: 20px;
+        &_text {
+            cursor: pointer;
+            opacity: .6;
+            text-decoration: none;
+            color: #d43f3f;
+            &:hover {
+                opacity: 1;
+                text-decoration: underline;
+            }
+        }
+    }
+    &_title {
+        margin-bottom: 50px;
+    }
+}

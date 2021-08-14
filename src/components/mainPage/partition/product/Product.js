@@ -1,4 +1,3 @@
-import classes from './Product.module.scss'
 import React, { useState } from 'react';
 import { connect } from 'react-redux'
 import { add } from '../../../../redux/actionCreator'
@@ -18,23 +17,23 @@ const Product = props => {
     }
 
     return (
-        <div className={classes.content_product}>
-            <div className={classes.content_product_info}>
-                <h4 className={classes.product_info_id}>{props.product.gid}</h4>
-            </div>
-            <div className={classes.content_product_info}>
-                <h4 className={classes.product_info_title}>{props.product.gname}</h4>
-            </div>
-            <div className={classes.content_product_info}>
-                <h4 className={classes.product_info_price}>{props.product.gprice} р.</h4>
-            </div>
-            <div className={classes.content_product_info}>
-                <input className={classes.input} onChange={handleInput.bind(this)} type='number' min='0'></input>
-            </div>
-            <div className={classes.content_product_info}>
-                <h4 className={classes.product_info_price}>{sum} р.</h4>
-            </div>
-        </div>
+        <tr>
+            <td>
+                <h4>{props.product.gid}</h4>
+            </td>
+            <td>
+                <h4>{props.product.gname}</h4>
+            </td>
+            <td>
+                <h4>{props.product.gprice} р.</h4>
+            </td>
+            <td>
+                <input onChange={handleInput.bind(this)} type='number' min='0'></input>
+            </td>
+            <td>
+                <h4>{sum} р.</h4>
+            </td>
+        </tr>
     )
 }
 

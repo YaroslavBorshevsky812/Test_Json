@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import reactDom from 'react-dom';
 import axios from 'axios';
 import { URL_CART } from '../../../config/config'
-import { object } from 'prop-types';
 import { serialize } from 'object-to-formdata';
 
 
@@ -34,7 +33,7 @@ const Cart = props => {
                             {props.cart.map((item, index) => {
                                 return (
                                     <div key={index}>
-                                        <span>{item.name} : {item.qty}</span>
+                                        <span>{index + 1}.&nbsp;&nbsp;{item.name} : {item.qty}</span>
                                     </div>
                                 )
                             })}
@@ -43,13 +42,20 @@ const Cart = props => {
     }
 
     function postDataToCart() {
-        let product = { product: {} }
-        Object.keys(props.cart).forEach(item => {
-        product.product[item] = props.cart[item].qty
-        })
+        let buf = {}
 
+        props.cart.forEach(item => {
+            buf = {
+                ...buf,
+                    [item.id]: item
+            }
+        })
+        let product = { product: {} }
+        Object.keys(buf).forEach(item => {
+            product.product[item] = buf[item].qty
+        })
         const formData = serialize(product)
-        
+
         axios({
             method: 'POST',
             url: URL_CART,
@@ -71,9 +77,9 @@ const Cart = props => {
 
                     </div>
                     <div className={classes.commonPrice}>
-                        <span>Общая сумма: {price}</span>
+                        <span className={classes.commonPrice_text}>Общая сумма: {price}</span>
                     </div>
-                    <button onClick={postDataToCart.bind(this)} className={classes.btn}>send</button>
+                    <button className={classes.cart_btn} onClick={postDataToCart.bind(this)}>send</button>
                 </div>
             </div>
         </div>

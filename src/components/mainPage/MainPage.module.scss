@@ -1,19 +1,20 @@
-
 .mainPage {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
+    height: auto;
     &_inner {
-        width: 1000px;
+        width: 1400px;
         padding: 0px 20px;
+        display: flex;
     }
-}
+  }
 
-.table {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-}
+
+
+
+
+
 

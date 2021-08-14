@@ -15,3 +15,37 @@ code {
 h1,h2,h3,h4 {
   margin: 0;
 }
+
+table {
+  width: 100%;
+  margin: 75px 0px;
+  border-collapse: collapse;
+  text-align: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 20px 0px;
+}
+
+th {
+  border: 1px solid #000;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+tbody {
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+

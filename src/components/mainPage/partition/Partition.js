@@ -1,11 +1,10 @@
-import classes from './Partition.module.scss'
 import Product from './product/Product'
 
 const Partition = props => {
 
     function renderProductItem() {
         return (
-            <div className={classes.content}>
+            <tbody>
                 {props.item.goods.map((product, index) => {
                     return (
                         <Product
@@ -14,17 +13,21 @@ const Partition = props => {
                         />
                     )
                 })}
-            </div>
+            </tbody>
         )
     }
 
     return (
-        <div className={classes.partition}>
-            <div className={classes.partition_title}>
-                <h1 className={classes.partition_title_text}>{props.item.rname}</h1>
-            </div>
+        <table>
+            <thead>
+                <tr>
+                    <th colSpan='5'>
+                        <h1>{props.item.rname}</h1>
+                    </th>
+                </tr>
+            </thead>
                 {renderProductItem()}
-        </div>
+        </table>
     )
 }
 
