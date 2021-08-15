@@ -30,6 +30,7 @@ const MainPage = props => {
     } else {
         filterProducts = props.products
     }
+    console.log(useParams())
     function renderTable() {
         return (
             <div className={classes.table_wrapper}>
