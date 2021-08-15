@@ -4,11 +4,10 @@ import classes from './MainPage.module.scss'
 import { connect } from 'react-redux'
 import { load } from '../../redux/actionCreator'
 import { URL } from '../../config/config'
-import Partition from './partition/Partition'
 import Cart from './cart/Cart'
 import SideBar from '../sidebar/SideBar'
 import { Switch, Route } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import Table from './table/Table'
 
 const MainPage = props => {
 
@@ -23,39 +22,16 @@ const MainPage = props => {
         loadDataFromApi()
     }, [URL])
 
-    const {id} = useParams()
-    let filterProducts = []
-    if (id !== undefined) {
-        filterProducts = props.products.filter(item => item.rid === id)
-    } else {
-        filterProducts = props.products
-    }
-    console.log(useParams())
-    function renderTable() {
-        return (
-            <div className={classes.table_wrapper}>
-                {props.products && 
-                    filterProducts.map((partition, index) => {
-                    return (
-                        <Partition 
-                        item={partition}
-                        key={index}
-                        />
-                    )
-                })}
-            </div>
-        )
-    }    
     return (
         <section className={classes.mainPage}>
             <div className={classes.mainPage_inner}>
                 <SideBar/>
                     <Switch>
                         <Route path="/" exact>
-                            {renderTable()}
+                            <Table/>
                         </Route>
                         <Route path="/:id" exact>
-                            {renderTable()} 
+                            <Table/>
                         </Route>
                     </Switch>
                 <Cart/>
