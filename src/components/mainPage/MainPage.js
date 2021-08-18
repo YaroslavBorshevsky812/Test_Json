@@ -27,7 +27,7 @@ const MainPage = props => {
             <div className={classes.mainPage_inner}>
                 <SideBar/>
                     <Switch>
-                        <Route path="/" exact>
+                        <Route path="/Test_Json" exact>
                             <Table/>
                         </Route>
                         <Route path="/:id" exact>
