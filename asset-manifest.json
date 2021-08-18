@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/YaroslavBorshevsky812/Test_Json/static/css/main.4353b0bb.chunk.css",
+    "main.js": "/YaroslavBorshevsky812/Test_Json/static/js/main.f5098f3e.chunk.js",
+    "main.js.map": "/YaroslavBorshevsky812/Test_Json/static/js/main.f5098f3e.chunk.js.map",
+    "runtime-main.js": "/YaroslavBorshevsky812/Test_Json/static/js/runtime-main.42d15f35.js",
+    "runtime-main.js.map": "/YaroslavBorshevsky812/Test_Json/static/js/runtime-main.42d15f35.js.map",
+    "static/js/2.9aaf8002.chunk.js": "/YaroslavBorshevsky812/Test_Json/static/js/2.9aaf8002.chunk.js",
+    "static/js/2.9aaf8002.chunk.js.map": "/YaroslavBorshevsky812/Test_Json/static/js/2.9aaf8002.chunk.js.map",
+    "static/js/3.1c5390c1.chunk.js": "/YaroslavBorshevsky812/Test_Json/static/js/3.1c5390c1.chunk.js",
+    "static/js/3.1c5390c1.chunk.js.map": "/YaroslavBorshevsky812/Test_Json/static/js/3.1c5390c1.chunk.js.map",
+    "index.html": "/YaroslavBorshevsky812/Test_Json/index.html",
+    "static/css/main.4353b0bb.chunk.css.map": "/YaroslavBorshevsky812/Test_Json/static/css/main.4353b0bb.chunk.css.map",
+    "static/js/2.9aaf8002.chunk.js.LICENSE.txt": "/YaroslavBorshevsky812/Test_Json/static/js/2.9aaf8002.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.42d15f35.js",
+    "static/js/2.9aaf8002.chunk.js",
+    "static/css/main.4353b0bb.chunk.css",
+    "static/js/main.f5098f3e.chunk.js"
+  ]
+}
