@@ -54,7 +54,7 @@ function App() {
           products={products}
         />
         <Switch>
-          <Route path="/" exact>
+          <Route path="/Test_Json" exact>
             <Table
               products={products}
               onSelectProduct={onSelectProduct}
